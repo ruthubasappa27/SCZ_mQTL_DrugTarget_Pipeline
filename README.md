@@ -74,7 +74,9 @@ All datasets are publicly available:
 1. **PGC3 SCZ GWAS:** https://pgc.unc.edu/for-researchers/download-results/
 2. **Hannon fetal brain mQTL:** http://epigenetics.essex.ac.uk/mQTL/
 3. **Hannon BESD format mQTL:** https://yanglab.westlake.edu.cn/software/smr/#DataResource
-4. **1000 Genomes LD reference:** https://yanglab.westlake.edu.cn/software/smr/#DataResource
+4. **1000 Genomes Phase 3 EUR LD reference panel:** 
+PLINK format for COLOC-reporter available at https://vu.data.surfsara.nl/index.php/s/VZNByNwpD8qqINe
+SMR-formatted version available at https://yanglab.westlake.edu.cn/software/smr/ 
 5. **COLOC-reporter pipeline:** https://github.com/ThomasSpargo/COLOC-reporter
 
 ## Pipeline Steps
