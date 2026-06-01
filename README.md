@@ -46,14 +46,14 @@ SCZ_mQTL_DrugTarget_Pipeline/
 │   └── README.md
 ├── 01_data_preprocessing/
 │   └── preprocess_and_define_loci.R
-├── 03_colocalisation/
+├── 02_colocalisation/
 │   ├── GWAS_samples.txt
 │   └── run_coloc_all.sh
-├── 04_results_analysis/
+├── 03_results_analysis/
 │   └── analyse_coloc_results.R
-├── 05_functional_validation/
+├── 04_functional_validation/
 │   └── cadd_annotation.R
-├── 06_SMR_analysis/
+├── 05_SMR_analysis/
 │   ├── all_probes.txt
 │   ├── prepare_gwas_smr.R
 │   └── run_smr.sh
@@ -118,7 +118,7 @@ A distance-based greedy approach was used to define independent GWAS loci using 
 
 ### 3. Colocalisation
 
-Run `03_colocalisation/run_coloc_all.sh`.
+Run `02_colocalisation/run_coloc_all.sh`.
 
 This step uses COLOC-reporter to test for shared causal variants at each locus.
 
@@ -128,7 +128,7 @@ This step uses COLOC-reporter to test for shared causal variants at each locus.
 
 ### 4. Results analysis
 
-Run `04_results_analysis/analyse_coloc_results.R`.
+Run `03_results_analysis/analyse_coloc_results.R`.
 
 This step includes:
 - candidate credible set construction
@@ -138,7 +138,7 @@ This step includes:
 
 ### 5. Functional validation
 
-Run `05_functional_validation/cadd_annotation.R`.
+Run `04_functional_validation/cadd_annotation.R`.
 
 This step performs:
 - CADD score annotation
