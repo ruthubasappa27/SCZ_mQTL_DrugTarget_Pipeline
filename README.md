@@ -33,25 +33,25 @@ Six loci showed strong evidence of colocalisation between SCZ GWAS and fetal bra
 
 HEIDI was used as a heterogeneity check in the SMR framework, and non-significant HEIDI values were treated as supportive of a shared underlying signal rather than definitive proof of causality.
 
+
 ## Repository structure
 
 ```text
 SCZ_mQTL_DrugTarget_Pipeline/
 ├── 01_data_preprocessing/
-│   └── full_analysis.R
-├── 02_locus_definition/
-│   └── reload_results.R
+│   └── preprocess_and_define_loci.R
 ├── 03_colocalisation/
-│   ├── run_coloc_all.sh
-│   └── GWAS_samples.txt
+│   ├── GWAS_samples.txt
+│   └── run_coloc_all.sh
 ├── 04_results_analysis/
-│   └── Project Sample run 1.R
+│   └── analyse_coloc_results.R
 ├── 05_functional_validation/
 │   └── cadd_annotation.R
-└── 06_SMR_analysis/
-    ├── all_probes.txt
-    ├── prepare_gwas_smr.R
-    └── run_smr.sh
+├── 06_SMR_analysis/
+│   ├── all_probes.txt
+│   ├── prepare_gwas_smr.R
+│   └── run_smr.sh
+└── README.md
 ```
 
 ## Requirements
@@ -90,7 +90,7 @@ All datasets used in this pipeline are publicly available.
 
 ### 1. Data preprocessing
 
-Run `01_data_preprocessing/full_analysis.R`.
+Run `01_data_preprocessing/preprocess_and_define_loci.R`.
 
 This step performs:
 - GWAS QC, including filtering by imputation quality, MAF, and palindromic SNP removal
@@ -103,7 +103,7 @@ This step performs:
 
 ### 2. Locus definition
 
-This step is performed within `01_data_preprocessing/full_analysis.R`.
+This step is performed within `01_data_preprocessing/preprocess_and_define_loci.R`.
 
 A distance-based greedy approach was used to define independent GWAS loci using 1 Mb windows centered on lead SNPs.
 
@@ -122,7 +122,7 @@ This step uses COLOC-reporter to test for shared causal variants at each locus.
 
 ### 4. Results analysis
 
-Run `04_results_analysis/Project Sample run 1.R`.
+Run `04_results_analysis/analyse_coloc_results.R`.
 
 This step includes:
 - candidate credible set construction
