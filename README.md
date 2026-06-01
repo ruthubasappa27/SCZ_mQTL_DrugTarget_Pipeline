@@ -38,6 +38,12 @@ HEIDI was used as a heterogeneity check in the SMR framework, and non-significan
 
 ```text
 SCZ_mQTL_DrugTarget_Pipeline/
+├── data/
+│   └── README.md
+├── references/
+│   └── README.md
+├── results/
+│   └── README.md
 ├── 01_data_preprocessing/
 │   └── preprocess_and_define_loci.R
 ├── 03_colocalisation/
