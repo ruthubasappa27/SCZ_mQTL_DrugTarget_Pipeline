@@ -5,6 +5,15 @@
 # Supervisor: Prof. Derek Morris
 # Date: May 2026
 
+# NOTE: Before running, download the following files
+# and place them in the correct directories.
+# See README.md > Data Sources for download links.
+#
+# data/PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv
+# data/All_Imputed_BonfSignificant_mQTLs.csv
+# references/ld_reference/EUR_phase3_chr1-22.bim
+
+
 library(data.table)
 library(dplyr)
 library(here)
